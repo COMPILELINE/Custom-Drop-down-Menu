@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="dropdown">
+            <input class="textbox" type="text" placeholder="Dropdown" readonly><span class="btn"></span></div>
+        <div class="item">
+            <div onclick="show('Html')">Html</div>
+            <div onclick="show('Css')">Css</div>
+            <div onclick="show('Javascript')">Jascript</div>
+            <div onclick="show('ReactJs')">ReactJs</div>
+            <div onclick="show('Python')">Python</div>
+        </div>
+    </section>
+    <script>
+        let item = document.querySelector('.item');
+        let dropdown = document.querySelector('.btn');
+        a = true;
+        function show(val){
+            var text = document.querySelector('.textbox');
+            text.value = val;
+        }
+        dropdown.onclick = function(){
+            dropdown.classList.toggle('active');
+            if(a===true){
+                a=false;
+                item.style.display = "block";
+            }else if(a===false){
+                a=true;
+                item.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>
